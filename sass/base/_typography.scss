@@ -259,11 +259,19 @@ button {
   &__heading {
     padding: 7% $gen-padding 6%;
     text-align: center;
+
+    @include respond(l-phone2) {
+      font-size: 3rem;
+    }
   }
 
   &__sub {
     font-weight: 500;
     margin: 0 0 1% 2%;
+
+    @include respond(tab-port3) {
+      @include none;
+    }
   }
 
   &__link {
@@ -272,6 +280,16 @@ button {
     &:hover {
       @include hover-link;
     }
+
+    @include respond(l-phone2) {
+      font-size: 2.8rem;
+      overflow-wrap: break-word;
+      width: 100%;
+    }
+
+    @include respond(sx-phone) {
+      font-size: 2.4rem;
+    }
   }
 }
 
@@ -279,6 +297,10 @@ button {
   font-size: 2rem;
   font-weight: 500;
   margin-bottom: 20px;
+
+  @include respond(tab-port3) {
+    margin-bottom: 36px;
+  }
 }
 
 .view {
@@ -290,21 +312,54 @@ button {
   &--title {
     font-weight: 800;
     font-size: 1.4rem;
+
+    @include respond(big-desktop-min) {
+      font-size: 2.2rem;
+    }
+
+    @include respond(l-phone2) {
+      font-size: 2.4rem;
+    }
   }
 
   &--sub {
     font-size: 1.8rem;
     color: $color-dark-grey;
     margin-top: 2%;
+
+    @include respond(big-desktop-min) {
+      font-size: 2.8rem;
+    }
+
+    @include respond(l-phone2) {
+      font-size: 3rem;
+    }
+
+    @include respond(m-phone2) {
+      font-size: 2.4rem;
+    }
+
   }
 }
 
 .describe {
   color: $color-greyish-blue;
+
+  @include respond(l-phone2) {
+    font-size: 2rem;
+  }
 }
 
 .information {
   color: $color-dark-blue;
+
+  @include respond(l-phone2) {
+    font-size: 2.8rem;
+  }
+
+  @include respond(m-phone2) {
+    font-size: 2.4rem;
+  }
 }
 
 .footer__text {

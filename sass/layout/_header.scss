@@ -11,6 +11,10 @@
   align-items: center;
   justify-content: space-between;
 
+  @include respond(big-desktop-min) {
+    padding: 0 $gen-padding-large;
+  }
+
   @include respond(tab-land) {
     height: 50vh;
     padding: 0 $gen-padding-medium;

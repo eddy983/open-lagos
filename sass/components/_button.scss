@@ -75,20 +75,25 @@
     margin-top: 4%;
     font-size: 1.4rem;
 
+    @include respond(tab-port3) {
+      font-size: 1.6rem;
+      padding: 4% 10%;
+    }
+
     &__csv {
-      background: #2F9171;
+      background: #2f9171;
     }
 
     &__xml {
-      background: #83629A;
+      background: #83629a;
     }
 
     &__pdf {
-      background: #B53438;
+      background: #b53438;
     }
 
     &__doc {
-      background: #2C81E4;
+      background: #2c81e4;
     }
 
     &__zip {
@@ -102,6 +107,11 @@
     border-radius: 100px;
     width: 5.2rem;
     margin-right: 8px;
+
+    @include respond(m-phone-m) {
+      height: 7.2rem;
+      width: 7.2rem;
+    }
   }
 
   &__embed {
@@ -120,7 +130,20 @@
     &:hover > svg path {
       fill: $color-black;
     }
+
+    @include respond(m-phone-m) {
+      padding: 6% 0;
+      display: flex;
+      justify-content: center;
+      margin-top: 8%;
+
+      &:not(:last-child) {
+        margin-right: 0;
+      }
+
+      &:last-child {
+        margin-top: 4%;
+      }
+    }
   }
 }
-
-

@@ -2,6 +2,10 @@
   background: #014f8e;
   padding: 2% $gen-padding;
 
+  @include respond(big-desktop-min) {
+    padding: 4% $gen-padding-large;
+  }
+
   @include respond(tab-land) {
     padding: 4% $gen-padding-medium;
   }
