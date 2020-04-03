@@ -35,8 +35,10 @@
   }
 
   &__chart {
+    @include flex-center;
     height: 36.7rem;
     background: $color-white;
+    padding: 8%;
 
     @include respond(l-phone2) {
       height: 44rem;
