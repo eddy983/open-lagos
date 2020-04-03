@@ -346,7 +346,24 @@ button {
     @include respond(m-phone2) {
       font-size: 2.4rem;
     }
+  }
+}
 
+.empty {
+  font-size: 5.6rem;
+  font-weight: 300;
+  margin-top: 20px;
+
+  @include respond(tab-land2) {
+    font-size: 4.2rem;
+  }
+
+  @include respond(m-phone4) {
+    font-size: 3.2rem;
+  }
+
+  @include respond(sx-phone) {
+    font-size: 2.4rem;
   }
 }
 

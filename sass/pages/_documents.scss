@@ -142,6 +142,29 @@
     @include docs;
   }
 
+  &__empty {
+    @include flex;
+    @include jc-c;
+    margin-top: 24%;
+
+    @include respond(l-phone2) {
+      margin-top: 10%;
+    }
+  }
+
+  &__no-file {
+    @include flex-center;
+    flex-direction: column;
+  }
+
+  &__img {
+    width: 60%;
+
+    @include respond(l-phone2) {
+      width: 70%;
+    }
+  }
+
   &__selects {
     margin-top: 10%;
 
