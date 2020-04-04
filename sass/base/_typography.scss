@@ -163,6 +163,10 @@ button {
     font-weight: 800;
     color: $color-blue;
 
+    @include respond(desktop) {
+      font-size: 1.8rem;
+    }
+
     &:hover {
       @include hover-link;
     }
@@ -182,6 +186,10 @@ button {
     color: $color-dark-grey;
     font-size: 1.8rem;
     margin-top: 2.5%;
+
+    @include respond(desktop) {
+      font-size: 1.6rem;
+    }
   }
 }
 
