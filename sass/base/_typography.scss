@@ -67,6 +67,12 @@ button {
     border-radius: 50px;
     padding: 10px 20px;
     text-align: center;
+    margin-bottom: 3%;
+    text-transform: uppercase;
+
+    &:not(:last-child) {
+      margin-right: 1.5%;
+    }
 
     @include respond(desktop) {
       font-size: 1rem;
@@ -78,18 +84,51 @@ button {
 
     &--1 {
       background: $color-dark-blue;
-      margin-bottom: 3%;
+
+      &:hover {
+        background: darken($color-dark-blue, 15%);
+      }
     }
 
     &--2 {
       background: $color-blue-2;
-      flex: 1 1 auto;
-      margin-right: 3%;
+
+      &:hover {
+        background: darken($color-blue-2, 15%);
+      }
     }
 
     &--3 {
       background: $color-light-blue;
-      flex: 1 1 auto;
+
+      &:hover {
+        background: darken($color-light-blue, 15%);
+      }
+    }
+
+    &--4 {
+      background: $color-blue;
+
+      &:hover {
+        background: darken($color-blue, 15%);
+      }
+    }
+
+    &--5 {
+      background: #CF337C;
+
+      &:hover {
+        background: darken(#CF337C, 15%);
+      }
+    }
+
+    &--6 {
+      background: #F5A84C;
+      color: $color-black;
+
+      &:hover {
+        background: darken(#F5A84C, 15%);
+      }
     }
   }
 }

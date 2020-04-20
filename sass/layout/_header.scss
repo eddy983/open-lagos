@@ -29,7 +29,7 @@
 
   &__subs {
     display: flex;
-    justify-content: space-between;
+    flex-wrap: wrap;
 
     @include respond(l-phone2) {
       display: none;
