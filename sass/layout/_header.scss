@@ -30,6 +30,7 @@
   &__subs {
     display: flex;
     flex-wrap: wrap;
+    margin-bottom: -3%;
 
     @include respond(l-phone2) {
       display: none;
