@@ -1,44 +1,154 @@
-.header {
-  background: linear-gradient(
-      0deg,
-      rgba(13, 35, 64, 0.96),
-      rgba(13, 35, 64, 0.96)
-    ),
-    url(../../assets/img/Header-banner.jpeg);
-  height: 88vh;
-  padding: 0 $gen-padding;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  background-repeat: no-repeat;
-  background-size: cover;
+// .header {
+//   background: linear-gradient(
+//       0deg,
+//       rgba(13, 35, 64, 0.96),
+//       rgba(13, 35, 64, 0.96)
+//     ),
+//     url(../../assets/img/Header-banner.jpeg);
+//   height: 88vh;
+//   padding: 0 $gen-padding;
+//   display: flex;
+//   align-items: center;
+//   justify-content: space-between;
+//   background-repeat: no-repeat;
+//   background-size: cover;
 
-  @include respond(big-desktop-min) {
-    padding: 0 $gen-padding-large;
-  }
+//   @include respond(big-desktop-min) {
+//     padding: 0 $gen-padding-large;
+//   }
+
+//   @include respond(tab-land) {
+//     height: 50vh;
+//     padding: 0 $gen-padding-medium;
+//   }
+
+//   @include respond(l-phone2) {
+//     height: 100vh;
+//     padding: 0 $gen-padding-small;
+//   }
+
+//   &__subs {
+//     display: flex;
+//     flex-wrap: wrap;
+//     margin-bottom: -3%;
+
+//     @include respond(l-phone2) {
+//       display: none;
+//     }
+//   }
+
+//   &__texts {
+//     width: 48.5%;
+
+//     @include respond(tab-land) {
+//       width: 100%;
+//     }
+//   }
+
+//   &__container {
+//     width: 40.5%;
+//     position: relative;
+
+//     @include respond(tab-land) {
+//       display: none;
+//     }
+//   }
+
+//   &__news {
+//     position: absolute;
+//     top: 0;
+//     transform: translateY(-32%);
+//   }
+
+//   &__new {
+//     width: 100%;
+//     padding: 10%;
+
+//     &--1 {
+//       background: $color-light-blue;
+//       color: $color-white;
+//     }
+
+//     &--2 {
+//       background: $color-orange;
+//       color: $color-black;
+//     }
+//   }
+// }
+
+.header {
+  position: relative;
+  height: 95vh;
+
+  background: linear-gradient(
+      179.3deg,
+      var(--main-color-darker) -18.74%,
+      var(--main-color-dark-75) 73.76%,
+      rgba(218, 201, 200, 0) 143.25%
+    ),
+    url(../../assets/img/head-ban2.jpg), var(--main-color);
+  background-blend-mode: normal, luminosity, normal;
+  background-size: cover;
+  background-position: bottom;
 
   @include respond(tab-land) {
     height: 50vh;
-    padding: 0 $gen-padding-medium;
   }
 
-  @include respond(l-phone2) {
-    height: 100vh;
-    padding: 0 $gen-padding-small;
+  @include respond(l-phone) {
+    height: 80vh;
   }
 
-  &__subs {
+  &__land {
+    background: linear-gradient(0deg, rgba(19, 40, 68, 0.44), rgba(19, 40, 68, 0.70)), url(../../assets/img/hero-img.png);
+    height: 66vh;
+    padding: 0 $gen-padding;
     display: flex;
-    flex-wrap: wrap;
-    margin-bottom: -3%;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+
+    @include respond(big-desktop-min) {
+      padding: 0 $gen-padding-large;
+    }
+
+    @include respond(tab-land) {
+      height: 60vh;
+      padding: 0 $gen-padding-medium;
+    }
 
     @include respond(l-phone2) {
-      display: none;
+      height: 50vh;
+      padding: 0 $gen-padding-small;
     }
   }
 
-  &__texts {
-    width: 48.5%;
+  &__about {
+    background: linear-gradient(
+        0deg,
+        rgba(3, 25, 38, 0.5),
+        rgba(3, 25, 38, 0.5)
+      ),
+      url(../../assets/img/banner.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    height: 54vh;
+    background-position: 0 56%;
+
+    @include respond(tab-land) {
+      height: 36vh;
+    }
+
+    @include respond(m-phone2) {
+      height: 28vh;
+    }
+  }
+
+  &__about-text {
+    @include position;
+    text-align: center;
 
     @include respond(tab-land) {
       width: 100%;
@@ -46,32 +156,249 @@
   }
 
   &__container {
-    width: 40.5%;
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
 
     @include respond(tab-land) {
-      display: none;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 54%;
+    }
+
+    @include respond(tab-port) {
+      width: 64%;
+    }
+
+    @include respond(l-phone) {
+      width: 80%;
     }
   }
 
-  &__news {
-    position: absolute;
-    top: 0;
-    transform: translateY(-32%);
-  }
-
-  &__new {
+  &__box {
     width: 100%;
-    padding: 10%;
 
-    &--1 {
-      background: $color-light-blue;
-      color: $color-white;
+    &__sub {
+      padding: 2.4rem 4.8rem;
+      background: var(--main-color-warmer);
+    }
+  }
+
+  &__sub {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__line {
+    border-bottom: 2px solid $color-white;
+    width: 100%;
+  }
+
+  &__report {
+    height: 40vh;
+
+    @include respond(tab-land) {
+      height: 20vh;
     }
 
-    &--2 {
-      background: $color-orange;
-      color: $color-black;
+    &--info-BG {
+      // background: linear-gradient(180deg, rgba(38, 84, 42, 0.9) -8.68%, rgba(160, 212, 164, 0.27) 111.63%), url(../../assets/img/info-BG.png);
+      // background: linear-gradient(180deg, var(--main-color-dark) -8.68%, var(--main-color-40) 111.63%), url(../../assets/img/infographics-pattern.png), var(--main-color-cold);
+      background: linear-gradient(
+          180deg,
+          var(--main-color-dark) -8.68%,
+          var(--main-color-40) 111.63%
+        ),
+        url(../../assets/img/infographics-pattern.png), var(--main-color-cold);
+    }
+
+    &--doc-BG {
+      // background: linear-gradient(180deg, rgba(38, 84, 42, 0.9) -8.68%, rgba(160, 212, 164, 0.27) 111.63%), url(../../assets/img/Proposed-BG.png);
+      background: linear-gradient(
+          180deg,
+          var(--main-color-dark) -8.68%,
+          var(--main-color-40) 111.63%
+        ),
+        url(../../assets/img/documents-pattern.png), var(--main-color-cold);
+    }
+
+    &--int-BG {
+      // background: linear-gradient(180deg, rgba(38, 84, 42, 0.9) -8.68%, rgba(160, 212, 164, 0.27) 111.63%), url(../../assets/img/Interactive-BG.png);
+      background: linear-gradient(
+          180deg,
+          var(--main-color-dark) -8.68%,
+          var(--main-color-40) 111.63%
+        ),
+        url(../../assets/img/interactive-pattern.png), var(--main-color-cold);
+    }
+
+    &--rep-BG {
+      // background: linear-gradient(180deg, rgba(38, 84, 42, 0.9) -8.68%, rgba(160, 212, 164, 0.27) 111.63%), url(../../assets/img/Policy-BG.png);
+      background: linear-gradient(
+          180deg,
+          var(--main-color-dark) -8.68%,
+          var(--main-color-40) 111.63%
+        ),
+        url(../../assets/img/reports-pattern.png), var(--main-color-cold);
+    }
+  }
+
+  &__text {
+    @include position;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 4rem;
+    color: $color-white;
+    width: 100%;
+    text-align: center;
+
+    @include respond(tab-land) {
+      font-size: 3rem;
+    }
+
+    @include respond(l-phone) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+
+    @include respond(tab-land) {
+      width: 100%;
+    }
+  }
+
+  &__input {
+    position: relative;
+    // width: 100%;
+    @include respond(tab-land) {
+      width: 100%;
+    }
+  }
+
+  &__search {
+    position: relative;
+
+    &__input {
+      width: 55.3rem;
+      font-size: 2rem;
+      padding: 2% 4%;
+      border: none;
+      transition: all 0.4s ease-in-out;
+
+      @include respond(tab-land) {
+        width: 100%;
+      }
+
+      @include respond(l-phone2) {
+        padding: 4%;
+      }
+
+      &:focus {
+        transform: scaleX(1.1);
+      }
+
+      &:focus ~ .header__search__button {
+        right: 0%;
+        transform: translate(0%, -50%);
+      }
+
+      &::placeholder {
+        color: #424242;
+        font-weight: 300;
+        letter-spacing: 0.5px;
+      }
+    }
+
+    &__button {
+      position: absolute;
+      top: 50%;
+      right: 4%;
+      transform: translate(4%, -50%);
+      display: flex;
+
+      &:hover > svg path {
+        stroke: $color-orange;
+      }
+    }
+
+    &__icon {
+      height: 2.4rem;
+      width: 2.4rem;
+    }
+  }
+
+  &__button {
+    display: flex;
+    padding: 8px 20px;
+    margin-top: 20px;
+    background: $color-orange;
+    align-items: center;
+
+    @include respond(tab-land) {
+      margin-top: 56px;
+      padding: 12px 24px;
+      font-size: 4.4rem;
+    }
+
+    @include respond(tab-port3) {
+      font-size: 3.2rem;
+    }
+
+    @include respond(l-phone2) {
+      font-size: 4rem;
+      justify-content: center;
+    }
+
+    @include respond(m-phone-m) {
+      width: 100%;
+      font-size: 2.8rem;
+    }
+
+    @include respond(sx-phone) {
+      margin-top: 32px;
+      font-size: 2.4rem;
+    }
+
+    &__icon {
+      margin-right: 6px;
+
+      @include respond(tab-land) {
+        height: 6rem;
+        width: 6rem;
+        margin-right: 16px;
+      }
+
+      @include respond(tab-port3) {
+        height: 4.8rem;
+        width: 4.8rem;
+        margin-right: 12px;
+      }
+
+      @include respond(l-phone2) {
+        margin-right: 16px;
+        height: 5.6rem;
+        width: 5.6rem;
+      }
+
+      @include respond(m-phone-m) {
+        height: 4.4rem;
+        width: 4.4rem;
+      }
+
+      @include respond(sx-phone) {
+        height: 3.6rem;
+        width: 3.6rem;
+        margin-right: 16px;
+      }
     }
   }
 }
+

@@ -1,6 +1,6 @@
 .datasets {
   padding: $land-top-padding $gen-padding;
-  background: #132844;
+  background: $color-white;
 
   @include respond(big-desktop-min) {
     padding: $land-top-padding $gen-padding-large;
@@ -56,5 +56,5 @@
 }
 
 .datasets__card:hover > .datasets__hover {
-  background: rgba(255, 255, 255, 0.28);
+  background: rgba(19, 40, 68, 0.28);
 }

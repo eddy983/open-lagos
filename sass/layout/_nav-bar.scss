@@ -2,6 +2,12 @@
   color: $color-white;
   padding: 2% $gen-padding;
   background: $color-blue;
+  
+
+  &--land {
+    color: $color-black;
+    background: #f5f5f5;
+  }
 
   @include respond(big-desktop-min) {
     padding: 2% $gen-padding-large;
@@ -23,7 +29,8 @@
   }
 
   &__logo {
-    font-size: 2rem;
+    font-family: 'Baloo Bhai 2', cursive;
+    font-size: 2.2rem;
     font-weight: 800;
 
     @include respond(l-phone2) {
@@ -82,7 +89,7 @@
   }
 
   &__link {
-    font-weight: 900;
+    font-weight: 700;
 
     &:hover {
       color: $color-orange;

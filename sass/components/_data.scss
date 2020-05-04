@@ -1,6 +1,6 @@
 .data {
   padding: $land-top-padding $gen-padding;
-  background: #f2f2f2;
+  background: #F3F7FC;
 
   @include respond(big-desktop-min) {
     padding: $land-top-padding $gen-padding-large;

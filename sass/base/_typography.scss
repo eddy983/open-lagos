@@ -2,7 +2,7 @@ body {
   color: $color-black;
   letter-spacing: 0.02em;
   font-feature-settings: "ss02" on, "ss04" on;
-  font: normal normal 1.6rem/1.7 "Nunito Sans", sans-serif;
+  font: normal normal 1.6rem/1.7 "Poppins", sans-serif;
   letter-spacing: 2px;
 }
 
@@ -36,6 +36,13 @@ button {
 }
 
 .header {
+
+  &__landing {
+    font-weight: 400;
+    color: $color-white;
+    margin-bottom: 1.5%;
+  }
+
   &__main {
     font-weight: 900;
     font-size: 7.6rem;
@@ -159,7 +166,7 @@ button {
 
 .datasets {
   &--title {
-    color: $color-white;
+    color: $color-dark-blue-2;
     margin-bottom: 5%;
 
     @include respond(l-phone2) {
@@ -168,7 +175,7 @@ button {
   }
 
   &--text {
-    color: $color-white;
+    color: $color-dark-blue-2;
     font-size: 1.6rem;
     font-weight: bold;
     text-align: center;
@@ -260,7 +267,7 @@ button {
   }
 
   &--what {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     color: $color-grey;
 
     @include respond(tab-land) {
