@@ -100,7 +100,12 @@
   }
 
   &__land {
-    background: linear-gradient(0deg, rgba(19, 40, 68, 0.44), rgba(19, 40, 68, 0.70)), url(../../assets/img/hero-img.png);
+    background: linear-gradient(
+        0deg,
+        rgba(19, 40, 68, 0.44),
+        rgba(19, 40, 68, 0.7)
+      ),
+      url(../../assets/img/hero-img.png);
     height: 66vh;
     padding: 0 $gen-padding;
     display: flex;
@@ -287,6 +292,7 @@
     position: relative;
 
     &__input {
+      font: normal normal 1.6rem/1.7 "Poppins", sans-serif;
       width: 55.3rem;
       font-size: 2rem;
       padding: 2% 4%;
@@ -401,4 +407,3 @@
     }
   }
 }
-

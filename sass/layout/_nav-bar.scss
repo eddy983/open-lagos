@@ -29,6 +29,8 @@
   }
 
   &__logo {
+    @include flex;
+    @include ai-c;
     font-family: 'Baloo Bhai 2', cursive;
     font-size: 2.2rem;
     font-weight: 800;
@@ -36,6 +38,12 @@
     @include respond(l-phone2) {
       font-size: 3rem;
     }
+  }
+
+  &__img {
+    object-fit: contain;
+    height: 3.8rem;
+    margin-right: 8px;
   }
 
   &__menu {
