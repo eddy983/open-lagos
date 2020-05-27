@@ -1,6 +1,6 @@
 .data {
   padding: $land-top-padding $gen-padding;
-  background: #F3F7FC;
+  background: $color-blue-3;
 
   @include respond(big-desktop-min) {
     padding: $land-top-padding $gen-padding-large;
@@ -8,6 +8,10 @@
 
   @include respond(tab-land) {
     padding: $land-top-padding $gen-padding-medium;
+  }
+
+  @include respond(tab-port3) {
+    padding: $land-top-padding-medium $gen-padding-medium;
   }
 
   @include respond(l-phone2) {
@@ -28,20 +32,42 @@
     flex: 1 1 48.5%;
     padding: 1.5%;
 
+    @include respond(tab-port3) {
+      flex: 1 1 100%;
+    }
+
     @include respond(l-phone2) {
       flex: 1 1 100%;
       padding: 4%;
+    }
+
+    @include respond(m-phone4) {
+      padding: 2% 4%;
     }
   }
 
   &__chart {
     @include flex-center;
-    height: 36.7rem;
+    height: 42.7rem;
     background: $color-white;
     padding: 8%;
+    border-radius: 12px;
+
+    @include respond(tab-land2) {
+      height: 36.7rem;
+    }
+
+    @include respond(tab-port3) {
+      height: 56.7rem;
+    }
+
 
     @include respond(l-phone2) {
       height: 44rem;
+    }
+
+    @include respond(m-phone4) {
+      height: 38rem;
     }
 
     @include respond(s-phone) {

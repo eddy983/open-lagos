@@ -1,13 +1,18 @@
 .datasets {
   padding: $land-top-padding $gen-padding;
+  padding: 10% $gen-padding $land-top-padding $gen-padding;
   background: $color-white;
 
   @include respond(big-desktop-min) {
-    padding: $land-top-padding $gen-padding-large;
+    padding: 10% $gen-padding-large $land-top-padding $gen-padding-large;
   }
-  
+
   @include respond(tab-land) {
-    padding: $land-top-padding $gen-padding-medium;
+    padding: 10% $gen-padding-medium $land-top-padding $gen-padding-medium;
+  }
+
+  @include respond(tab-port3) {
+    padding: $land-top-padding-medium $gen-padding-medium;
   }
 
   @include respond(l-phone2) {
@@ -16,16 +21,13 @@
 
   &__container {
     display: flex;
-    width: 100%;
     flex-wrap: wrap;
+    margin: -1.5%;
   }
 
   &__card {
-    flex: 1 1 16.666666666666667%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 3% 0;
+    flex: 1 1 25%;
+    padding: 1.5%;
 
     @include respond(tab-land) {
       flex: 1 1 33.333333333333333%;
@@ -34,14 +36,30 @@
     @include respond(l-phone2) {
       flex: 1 1 50%;
     }
+
+    @include respond(m-phone4) {
+      flex: 1 1 100%;
+
+      &:not(:last-child) {
+        margin-bottom: 3%;
+      }
+    }
   }
 
   &__hover {
     display: flex;
-    padding: 20px 20px;
-    background: rgba(255, 255, 255, 0);
-    border-radius: 100px;
-    transition: all .5s;
+    flex-direction: column;
+    align-items: center;
+    padding: 12% 0;
+    background: #ffffff;
+    box-shadow: 0px 0px 12px rgba(37, 36, 36, 0.15);
+    border-radius: 12px;
+    transition: all .2s;
+
+    &:hover {
+      box-shadow: 0px 12px 26px rgba(23, 42, 149, 0.15);
+      transform: translateY(-8px);
+    }
   }
 
   &__icon {
@@ -55,6 +73,7 @@
   }
 }
 
-.datasets__card:hover > .datasets__hover {
-  background: rgba(19, 40, 68, 0.28);
-}
+// .datasets__card:hover > .datasets__hover {
+//   box-shadow: 0px 10px 16px rgba(37, 36, 36, 0.08);
+//   transform: translateX(6px);
+// }

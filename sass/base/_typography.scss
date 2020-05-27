@@ -1,13 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+Bhai+2:wght@800&family=Catamaran:wght@700;800&family=Inter:wght@400;600;700&display=swap');
+
 body {
   color: $color-black;
   letter-spacing: 0.02em;
   font-feature-settings: "ss02" on, "ss04" on;
-  font: normal normal 1.6rem/1.7 "Poppins", sans-serif;
-  letter-spacing: 2px;
+  font: normal normal 1.6rem/1.6 "Inter", sans-serif;
+  letter-spacing: 1px;
 }
 
 h2 {
-  font-size: 3.6rem;
+  font-size: 4.8rem;
+  font-family: 'Catamaran', sans-serif;
+
+  @include respond(m-phone4) {
+    font-size: 4rem;
+  }
 
   @include respond(sx-phone) {
     font-size: 3rem;
@@ -38,9 +45,30 @@ button {
 .header {
 
   &__landing {
+    font-family: 'Catamaran', sans-serif;
     font-weight: 400;
-    color: $color-white;
-    margin-bottom: 1.5%;
+    color: $color-orange;
+    margin-right: 3%;
+    font-size: 9.2rem;
+    line-height: 1.2;
+    flex: 1 1 48.5%;
+
+    @include respond(tab-port3) {
+      font-size: 8.2rem;
+    }
+
+    @include respond(m-phone2) {
+      flex: 1 1 100%;
+    }
+
+    @include respond(m-phone4) {
+      font-size: 7.2rem;
+      text-align: center;
+    }
+
+    @include respond(sx-phone) {
+      font-size: 5.2rem;
+    }
   }
 
   &__main {
@@ -140,6 +168,20 @@ button {
   }
 }
 
+.allocation {
+  font-weight: bold;
+
+  &--amount {
+    font-size: 4.8rem;
+  }
+
+  &--info {
+    font-size: 1.6rem;
+    color: #626C84;
+    margin-top: -8px;
+  }
+}
+
 .news {
   &--title {
     font-weight: bold;
@@ -166,20 +208,22 @@ button {
 
 .datasets {
   &--title {
-    color: $color-dark-blue-2;
-    margin-bottom: 5%;
+    color: $color-blue-3;
+    margin-bottom: 3%;
 
     @include respond(l-phone2) {
       @include center-align;
+      margin-bottom: 6%;
     }
   }
 
   &--text {
-    color: $color-dark-blue-2;
-    font-size: 1.6rem;
+    color: $color-blue-3;
+    font-size: 2rem;
     font-weight: bold;
     text-align: center;
     letter-spacing: 1.5px;
+    margin-top: 12px;
 
     @include respond(tab-land) {
       font-size: 2rem;
@@ -189,10 +233,11 @@ button {
 
 .data {
   &--title {
-    margin-bottom: 5%;
+    margin-bottom: 3%;
+    color: $color-white;
 
     @include respond(l-phone2) {
-      margin-bottom: 12%;
+      margin-bottom: 6%;
       @include center-align;
     }
   }

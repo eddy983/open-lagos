@@ -5,8 +5,9 @@
   
 
   &--land {
-    color: $color-black;
-    background: #f5f5f5;
+    background: $color-blue-2;
+    display: flex;
+    align-items: center;
   }
 
   @include respond(big-desktop-min) {

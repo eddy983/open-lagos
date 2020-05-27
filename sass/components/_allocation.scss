@@ -1,0 +1,91 @@
+.allocation {
+  height: 20vh;
+  background: linear-gradient(88.22deg, #0c154b 1.2%, #091c88 165.32%);
+  padding: 0 $gen-padding;
+  position: relative;
+
+  @include respond(tab-port3) {
+    padding: $gen-padding-medium 0;
+    height: auto;
+  }
+
+  @include respond(l-phone2) {
+    padding: $gen-padding-small 0;
+  }
+
+  @include respond(m-phone4) {
+    padding: 0%;
+  }
+
+  &__container {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    width: 100%;
+    padding: 0 8%;
+
+    @include respond(big-desktop-min) {
+      padding: 0 $gen-padding-large;
+    }
+
+    @include respond(tab-land) {
+      padding: 0 $gen-padding-medium;
+    }
+
+    @include respond(tab-port3) {
+      position: initial;
+    }
+
+    @include respond(l-phone2) {
+      padding: 0 $gen-padding-small;
+    }
+  }
+
+  &__cards {
+    display: flex;
+    width: 100%;
+    padding: 28px 0;
+    background: $color-white;
+    box-shadow: 0px 0px 12px rgba(37, 36, 36, 0.15);
+    border-radius: 12px;
+
+    @include respond(tab-port3) {
+      flex-wrap: wrap;
+      padding: 18px 0;
+    }
+
+    @include respond(m-phone2) {
+      background: no-repeat;
+      box-shadow: none;
+      border-radius: 0;
+    }
+  }
+
+  &__card {
+    @include flex-center;
+    @include fxd-c;
+    flex: 1 1 25%;
+
+    @include respond(tab-port3) {
+      flex: 1 1 50%;
+      padding: 6% 0;
+    }
+
+    @include respond(m-phone2) {
+      flex: 1 1 100%;
+      background: #fff;
+      box-shadow: 0px 0px 12px rgba(37, 36, 36, 0.15);
+      border-radius: 12px;
+
+      &:not(:last-child) {
+        margin-bottom: 3%;
+      }
+    }
+  }
+
+  &__svg {
+    @include respond(m-phone2) {
+      @include none;
+    }
+  }
+}
